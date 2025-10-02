@@ -1,0 +1,10 @@
+jobs:
+- job: RunPostmanTests
+  steps:
+  - script: |
+      # Install Newman (Postman CLI)
+      npm install -g newman
+
+      # Run Postman collection
+      newman run Reto Bladex.postman_collection.json
+    displayName: 'Run Postman Tests'
